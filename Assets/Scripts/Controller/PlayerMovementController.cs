@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    #region Veriables
     [SerializeField] private Rigidbody rigidbody;
-    [Header("Data")] 
+    [Header("Data")]
     [SerializeField] private float forwardSpeed = 10f;
     [SerializeField] private float SidewaysSpeed = 2f;
     [ShowInInspector] private bool isReadyToMove = false;
     [ShowInInspector] private bool isPlayToMove = true;
-    [SerializeField] private FixedJoystick joystick;
+    public FixedJoystick joystick;
     public PlayerAnimationController playerAnimationController;
+    #endregion
+
     void Start()
     {
         
@@ -23,8 +26,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            isReadyToMove = true;
-            isPlayToMove = false;
+            Play();
         }
         if (isPlayToMove)
         {
@@ -46,6 +48,11 @@ public class PlayerMovementController : MonoBehaviour
     {
         rigidbody.velocity = Vector3.zero;
         playerAnimationController.IdleAnim();
+    }
+    public void Play()
+    {
+        isReadyToMove = true;
+        isPlayToMove = false;
     }
     #endregion
 }
