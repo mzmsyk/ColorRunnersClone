@@ -10,7 +10,7 @@ public class CollectableManager : MonoBehaviour
 
     private void Awake()
     {
-        collectableAnimController.CollectableIdleAnim();
+        //collectableAnimController.CollectableIdleAnim();
     }
 
     public void CollectableRunAnim()

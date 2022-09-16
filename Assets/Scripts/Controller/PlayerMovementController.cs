@@ -43,6 +43,7 @@ public class PlayerMovementController : MonoBehaviour
         rigidbody.velocity = new Vector3(SidewaysSpeed * joystick.Horizontal, rigidbody.position.y, forwardSpeed);
         playerAnimationController.ResetAnim();
         playerAnimationController.RunAnim();
+        
     }
     public void IdleMove()
     {

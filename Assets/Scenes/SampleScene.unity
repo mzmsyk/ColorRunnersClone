@@ -392,6 +392,18 @@ MonoBehaviour:
   SidewaysSpeed: 7
   joystick: {fileID: 695646467}
   playerAnimationController: {fileID: 1627689688}
+--- !u!114 &527156964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527156962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1881f4bdcb5f4408d721049495c5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &527156965 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3408260341817921115, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -1599,6 +1611,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: caef743a6fa34d843868b9f6f80bfcb1, type: 2}
     - target: {fileID: 7714398886529801322, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: caef743a6fa34d843868b9f6f80bfcb1, type: 2}
+    - target: {fileID: 7714398886591078508, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caef743a6fa34d843868b9f6f80bfcb1, type: 2}
