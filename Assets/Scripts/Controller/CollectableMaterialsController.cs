@@ -70,7 +70,9 @@ public class CollectableMaterialsController : MonoBehaviour
         }
         else
         {
-            Debug.Log("çýkarýldý");
+            PlayerManager.instance.CollactableRemove(col.transform);
+            Destroy(col.gameObject);
+            Debug.Log("çýkýldý");
         }
     }
 }

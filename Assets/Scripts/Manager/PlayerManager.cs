@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
 {
     public List<Transform> collactables = new List<Transform>();
     public PlayerMovementController playerMovementController;
-    float nodeDistance = 2;
+    float nodeDistance = 1;
     #region Singleton
     public static PlayerManager instance;
     private Sequence _sequence;
@@ -56,7 +56,14 @@ public class PlayerManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-   
+    public void CollactableRemove(Transform other)
+    {
+        collactables.TrimExcess();
+        collactables.RemoveAt(transform.childCount-3);
+        transform.GetChild(transform.childCount -1).parent = null;
+        Destroy(transform.GetChild(transform.childCount).gameObject);
+
+    }
     public void HorizontalLimit(List<Transform> other)
     {
 
