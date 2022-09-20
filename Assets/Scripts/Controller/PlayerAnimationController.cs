@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
+    #region Veriables
     private Animator animator;
+    #endregion
+
     private void Start()
     {
         animator = GetComponent<Animator>();

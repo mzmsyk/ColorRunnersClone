@@ -222,6 +222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 801230523}
   collectableManager: {fileID: 105903232}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 801230522}
 --- !u!114 &105903232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 750421226}
   collectableManager: {fileID: 152317672}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 750421225}
 --- !u!114 &152317672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +305,11 @@ MonoBehaviour:
 --- !u!1 &355892903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929680207019838, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &355892906 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488377088924613, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &355892907
@@ -351,9 +360,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739413538910dec4b87521dbca7a4875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &417074282 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8428416561975636342, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &444209991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929680362741659, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &444209994 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488377454377824, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &444209995
@@ -404,6 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1881f4bdcb5f4408d721049495c5f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 527156966}
+  collect: {fileID: 1202328784}
 --- !u!54 &527156965 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3408260341817921115, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -423,6 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collactables: []
   playerMovementController: {fileID: 527156963}
+  playerSkinnedMesh: {fileID: 2137392957}
 --- !u!1001 &569574052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -578,6 +600,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 914994714}
   collectableManager: {fileID: 602938157}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 914994713}
 --- !u!114 &602938157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,6 +824,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929680004814423, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &750421225 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488379167126188, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &750421226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,6 +846,11 @@ MonoBehaviour:
 --- !u!1 &801230519 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929680050660866, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &801230522 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488379086603001, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &801230523
@@ -914,6 +948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 355892907}
   collectableManager: {fileID: 841183014}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 355892906}
 --- !u!114 &841183014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,6 +1127,11 @@ MonoBehaviour:
 --- !u!1 &914994710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929681077411965, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &914994713 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488378094322822, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &914994714
@@ -1296,6 +1337,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 1704218253}
   collectableManager: {fileID: 1197284492}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 1704218252}
 --- !u!136 &1197284491
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1342,6 +1385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 1258303844}
   collectableManager: {fileID: 1198508839}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 1258303843}
 --- !u!136 &1198508838
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1374,6 +1419,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4207937943284648327, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1202328784 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4207937943284648326, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1202328787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,6 +1438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 1445481501}
   collectableManager: {fileID: 1202328789}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 1445481503}
 --- !u!136 &1202328788
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1418,6 +1470,11 @@ MonoBehaviour:
 --- !u!1 &1258303840 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929680986774651, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1258303843 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488377869482112, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1258303844
@@ -1646,6 +1703,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caef743a6fa34d843868b9f6f80bfcb1, type: 2}
+    - target: {fileID: 8428416561975636342, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428416561975636342, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_Color.r
+      value: 0.11764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428416561975636342, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6822236803027950498, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
     - {fileID: 6059729542448441604, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -1675,6 +1744,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorEnums: 0
   PlayerSkinnedRenderer: {fileID: 2137392957}
+--- !u!137 &1445481503 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488378996348408, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1482798198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7230267355401400673, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1482798204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482798198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09efe05f8de18b48bf03abe9599744c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorEnums: 3
+  gateColor: {fileID: 417074282}
 --- !u!1 &1548269159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3937536484162421737, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -1709,9 +1802,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513213f12d56ecf4d9441c332d19a8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1664533239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238084938467039659, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1664533242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664533239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393c912322d5bb84cb47daca43d89621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSkinnedMesh: {fileID: 2137392957}
+  colorEnums: 0
 --- !u!1 &1704218249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929679481257926, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1704218252 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488378586405693, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1704218253
@@ -1731,6 +1848,11 @@ MonoBehaviour:
 --- !u!1 &1732082729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929679894044041, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1732082732 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1252488378996849010, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
   m_PrefabInstance: {fileID: 1445481497}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1732082733
@@ -1780,6 +1902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 444209995}
   collectableManager: {fileID: 1804063601}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 444209994}
 --- !u!114 &1804063601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,6 +1950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableMaterialsController: {fileID: 1732082733}
   collectableManager: {fileID: 2016089732}
+  gateSpriteRenderer: {fileID: 417074282}
+  collectableSkinnedMesh: {fileID: 1732082732}
 --- !u!114 &2016089732
 MonoBehaviour:
   m_ObjectHideFlags: 0

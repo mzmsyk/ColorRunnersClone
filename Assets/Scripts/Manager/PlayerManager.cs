@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
 
 public class PlayerManager : MonoBehaviour
 {
-    public List<Transform> collactables = new List<Transform>();
+    #region Veriables
+     public List<Transform> collactables = new List<Transform>();
     public PlayerMovementController playerMovementController;
+    public SkinnedMeshRenderer playerSkinnedMesh;
     float nodeDistance = 1;
+    private Sequence _sequence;
+    #endregion
+   
     #region Singleton
     public static PlayerManager instance;
-    private Sequence _sequence;
+
     private void Awake()
     {
         _sequence = DOTween.Sequence();
@@ -40,6 +46,7 @@ public class PlayerManager : MonoBehaviour
         other.parent = transform;
         other.position = transform.position-new Vector3(0,0, nodeDistance);
         nodeDistance += 1f;
+        
         //other.GetComponent<CapsuleCollider>().isTrigger = false;
         StartCoroutine(CollectableObjectsBigger());
     }
@@ -74,4 +81,5 @@ public class PlayerManager : MonoBehaviour
 
 
     }
+    
 }

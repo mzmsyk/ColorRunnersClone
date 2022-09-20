@@ -5,11 +5,15 @@ using UnityEngine;
 public class CollectableManager : MonoBehaviour
 {
     public CollectableAnimController collectableAnimController;
-
+    //public static CollectableManager instance;
 
 
     private void Awake()
     {
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //}
         //collectableAnimController.CollectableIdleAnim();
     }
 
@@ -20,6 +24,12 @@ public class CollectableManager : MonoBehaviour
     }
     public void CollectableIdleAnim()
     {
+        collectableAnimController.ResetAllAnim();
         collectableAnimController.CollectableIdleAnim();
+    }
+    public void ResetAllAnim()
+    {
+
+        collectableAnimController.ResetAllAnim();
     }
 }

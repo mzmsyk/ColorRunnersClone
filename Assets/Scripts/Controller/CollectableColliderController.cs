@@ -5,18 +5,29 @@ using Enums;
 
 public class CollectableColliderController : MonoBehaviour
 {
+    #region Veriables
     public CollectableMaterialsController collectableMaterialsController;
     public CollectableManager collectableManager;
+    public SpriteRenderer gateSpriteRenderer;
+    public SkinnedMeshRenderer collectableSkinnedMesh;
+    #endregion
+    #region CollectableColorAndGateControls
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag=="Player")
+        if (col.gameObject.tag == "Player")
         {
-            
+
             //collectableMaterialsController.ChangeColorState(collectableMaterialsController.colorEnums);
             Debug.Log("color");
             collectableMaterialsController.CollectableMeshControl(this.transform);
             collectableManager.CollectableRunAnim();
         }
+        if (col.gameObject.tag == "Gate")
+        {
+            collectableSkinnedMesh.material.color = gateSpriteRenderer.color;
+        }
     }
-    
+    #endregion
+
+
 }

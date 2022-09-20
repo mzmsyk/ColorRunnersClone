@@ -38,22 +38,30 @@ public class PlayerMovementController : MonoBehaviour
         }
     }
     #region  Functions
+    #region PlayRunnerControls
     public void RunnerMove()
     {
         rigidbody.velocity = new Vector3(SidewaysSpeed * joystick.Horizontal, rigidbody.position.y, forwardSpeed);
         playerAnimationController.ResetAnim();
         playerAnimationController.RunAnim();
-        
+
     }
+    #endregion
+    #region PlayIdleControls
     public void IdleMove()
     {
         rigidbody.velocity = Vector3.zero;
         playerAnimationController.IdleAnim();
     }
+    #endregion
+
+    #region PlayButtonIsMove
     public void Play()
     {
         isReadyToMove = true;
         isPlayToMove = false;
     }
+    #endregion
+
     #endregion
 }

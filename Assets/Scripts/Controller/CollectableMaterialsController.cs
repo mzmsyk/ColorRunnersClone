@@ -5,28 +5,40 @@ using Enums;
 
 public class CollectableMaterialsController : MonoBehaviour
 {
+    #region Veriables
     public ColorEnums colorEnums;
-
     public SkinnedMeshRenderer PlayerSkinnedRenderer;
     SkinnedMeshRenderer obj;
-    public static CollectableMaterialsController instance;
+    bool isColorSwitch = true;
+    #endregion
 
-
+    private void Awake()
+    {
+        
+    }
     private void Start()
     {
-         //ChangeColorState(ColorEnums.White);
         obj = GetComponent<SkinnedMeshRenderer>();
     }
     private void Update()
     {
-        SwitchColor(colorEnums);
+        if (isColorSwitch)
+        {
+            SwitchColor(colorEnums);
+            isColorSwitch = false;
+        }
     }
-
+    public void ColorChange()
+    {
+        isColorSwitch = false;
+        obj.material.color = PlayerColorController.instance.playerSkinnedMesh.material.color;
+    }
 
     public void ChangeColorState(ColorEnums _colorEnums)
     {
         this.colorEnums = _colorEnums;
         SwitchColor(colorEnums);
+        
     }
    public void SwitchColor(ColorEnums colorEnums)
     {
@@ -60,9 +72,10 @@ public class CollectableMaterialsController : MonoBehaviour
                 break;
         }
     }
+    #region CollectablesMaterialsControls
     public void CollectableMeshControl(Transform col)
     {
-        
+
         if (PlayerSkinnedRenderer.material.color == obj.material.color)
         {
             PlayerManager.instance.CollactableAdded(col.transform);
@@ -75,4 +88,6 @@ public class CollectableMaterialsController : MonoBehaviour
             Debug.Log("çýkýldý");
         }
     }
+    #endregion
+
 }
