@@ -42,9 +42,11 @@ public class CollectableStackManager : MonoBehaviour
         {
             int index = i;
             Vector3 pos = collectables[index].transform.localPosition;
-            pos.x = collectables[index - 1].transform.position.x - collectables[index].transform.localPosition.x * 2;
+            pos.x = collectables[index - 1].transform.localPosition.x;
+            collectables[index].transform.DOLocalMove(pos, 0.5f);
+            // - collectables[index].transform.localPosition.x * 2;
             //Mathf.Clamp(collectables[index].localPosition.x, -2f, 2f);
-            collectables[index].transform.DOLocalMove(pos, 0.25f);
+
 
         }
         //if (collectables.Count > 1)

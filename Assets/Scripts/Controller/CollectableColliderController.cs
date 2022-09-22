@@ -26,6 +26,11 @@ public class CollectableColliderController : MonoBehaviour
         {
             collectableSkinnedMesh.material.color = gateSpriteRenderer.color;
         }
+        if (col.gameObject.tag=="DroneArea")
+        {
+            collectableManager.ResetAllAnim();
+            collectableManager.CollectableCrouchAnim();
+        }
     }
     #endregion
 

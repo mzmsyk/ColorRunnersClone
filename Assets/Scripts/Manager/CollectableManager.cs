@@ -32,4 +32,8 @@ public class CollectableManager : MonoBehaviour
 
         collectableAnimController.ResetAllAnim();
     }
+    public void CollectableCrouchAnim()
+    {
+        collectableAnimController.CollectableCrouchAnim();
+    }
 }

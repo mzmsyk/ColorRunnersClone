@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
     #region Veriables
-    [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] public Rigidbody rigidbody;
     [Header("Data")]
-    [SerializeField] private float forwardSpeed = 10f;
-    [SerializeField] private float SidewaysSpeed = 2f;
+    [SerializeField] public float forwardSpeed = 10f;
+    [SerializeField] public float SidewaysSpeed = 2f;
     [ShowInInspector] private bool isReadyToMove = false;
     [ShowInInspector] private bool isPlayToMove = true;
     public FixedJoystick joystick;
@@ -60,6 +60,10 @@ public class PlayerMovementController : MonoBehaviour
     {
         isReadyToMove = true;
         isPlayToMove = false;
+    }
+    public void StopMove()
+    {
+        isReadyToMove = false;
     }
     #endregion
 

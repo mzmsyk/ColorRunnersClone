@@ -24,5 +24,10 @@ public class PlayerAnimationController : MonoBehaviour
     {
         animator.SetBool("run", false);
         animator.SetBool("idle", false);
+        animator.SetBool("crouch", false);
+    }
+    public void CrouchAnim()
+    {
+        animator.SetBool("crouch", true);
     }
 }

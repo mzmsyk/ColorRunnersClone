@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294646dcd5aa7ca4ebcf51bb1d2f3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorEnums: 0
+  colorEnums: 3
   PlayerSkinnedRenderer: {fileID: 2137392957}
 --- !u!1 &818808384
 GameObject:
@@ -1491,6 +1491,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorEnums: 0
   PlayerSkinnedRenderer: {fileID: 2137392957}
+--- !u!1 &1389362531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3372561961513862296, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+  m_PrefabInstance: {fileID: 1445481497}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389362535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389362531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c93a185ddb09145a14924fc6f81e1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovementController: {fileID: 527156963}
+  playerAnimationController: {fileID: 1627689688}
 --- !u!1 &1420161263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3937536486071946708, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -1703,6 +1722,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caef743a6fa34d843868b9f6f80bfcb1, type: 2}
+    - target: {fileID: 8165777951641033049, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167135832720530713, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8428416561975636342, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
       propertyPath: m_Color.g
       value: 0.5647059
@@ -1821,6 +1848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSkinnedMesh: {fileID: 2137392957}
   colorEnums: 0
+  isColorChange: 1
 --- !u!1 &1704218249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2901929679481257926, guid: c4930b15c45427e41b7c6c1becee9686, type: 3}
@@ -1867,7 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 294646dcd5aa7ca4ebcf51bb1d2f3c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorEnums: 0
+  colorEnums: 3
   PlayerSkinnedRenderer: {fileID: 2137392957}
 --- !u!1 &1804063595 stripped
 GameObject:

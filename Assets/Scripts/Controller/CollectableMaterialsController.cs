@@ -78,16 +78,19 @@ public class CollectableMaterialsController : MonoBehaviour
 
         if (PlayerSkinnedRenderer.material.color == obj.material.color)
         {
+            col.transform.parent = null;
             PlayerManager.instance.CollactableAdded(col.transform);
             Debug.Log("girildi");
         }
         else
         {
-            PlayerManager.instance.CollactableRemove(col.transform);
-            Destroy(col.gameObject);
+            PlayerManager.instance.CollactableRemove(col);
+            //Destroy(col);
             Debug.Log("çýkýldý");
         }
     }
     #endregion
+
+    //public void
 
 }

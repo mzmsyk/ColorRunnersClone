@@ -39,14 +39,20 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    playerMovementController.forwardSpeed = 10;
+        //    CollectableMovementControl(collactables, playerMovementController);
+        //}
     }
     public void CollactableAdded(Transform other)
     {
-        collactables.Add(other);
-        other.parent = transform;
-        other.position = transform.position-new Vector3(0,0, nodeDistance);
-        nodeDistance += 1f;
         
+        other.parent = transform;
+        //other.gameObject.AddComponent<Rigidbody>(); //new Vector3(playerMovementController.SidewaysSpeed * playerMovementController.joystick.Horizontal, playerMovementController.rigidbody.position.y, playerMovementController.forwardSpeed);
+        other.position = transform.position-new Vector3(0,0, nodeDistance);
+        nodeDistance += 2f;
+        collactables.Add(other);
         //other.GetComponent<CapsuleCollider>().isTrigger = false;
         StartCoroutine(CollectableObjectsBigger());
     }
@@ -63,13 +69,15 @@ public class PlayerManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-    public void CollactableRemove(Transform other)
+    public void CollactableRemove(Transform col)
     {
-        collactables.TrimExcess();
+
         collactables.RemoveAt(transform.childCount-3);
         transform.GetChild(transform.childCount -1).parent = null;
-        Destroy(transform.GetChild(transform.childCount).gameObject);
-
+        //Destroy(transform.GetChild(transform.childCount).gameObject);
+        //Destroy(col);
+        collactables.TrimExcess();
+        
     }
     public void HorizontalLimit(List<Transform> other)
     {
@@ -81,5 +89,12 @@ public class PlayerManager : MonoBehaviour
 
 
     }
-    
+    public void CollectableMovementControl(List<Transform> other,PlayerMovementController playerMovement)
+    {
+        for (int i = 1; i < other.Count; i++)
+        {
+            other[i].GetComponent<Rigidbody>().velocity = new Vector3(playerMovement.SidewaysSpeed * playerMovement.joystick.Horizontal,
+                playerMovement.rigidbody.position.y, playerMovement.forwardSpeed);
+        }
+    }
 }

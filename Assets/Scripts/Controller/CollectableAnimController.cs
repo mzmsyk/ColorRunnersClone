@@ -26,5 +26,10 @@ public class CollectableAnimController : MonoBehaviour
     {
         animator.SetBool("run", false);
         animator.SetBool("idle", false);
+        animator.SetBool("crouch", false);
+    }
+    public void CollectableCrouchAnim()
+    {
+        animator.SetBool("crouch", true);
     }
 }
