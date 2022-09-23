@@ -80,6 +80,7 @@ public class CollectableMaterialsController : MonoBehaviour
         {
             col.transform.parent = null;
             PlayerManager.instance.CollactableAdded(col.transform);
+            //col.GetComponent<CollectableMovementController>().isMoving = true;
             Debug.Log("girildi");
         }
         else

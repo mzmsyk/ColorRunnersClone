@@ -33,6 +33,13 @@ public class CollectableColliderController : MonoBehaviour
         }
     }
     #endregion
-
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "DroneArea")
+        {
+            //collectableManager.ResetAllAnim();
+            //collectableManager.CollectableRunAnim();
+        }
+    }
 
 }
